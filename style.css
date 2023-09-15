@@ -1,0 +1,184 @@
+/* Global styles for all elements */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  /* Custom variables defined in the root */
+  :root {
+    /* Colors */
+    --gray-0: #000000;
+    --gray-1: #222222;
+    --gray-2: #dddddd;
+    --gray-3: #fbfbfb;
+    --gray-4: #ffffff;
+    --primary: #8a2be2;
+    --secondary: #20d397;
+  
+    /* Sizes and dimensions */
+    --font-size-1: 1.5rem;
+    --font-size-2: 1.25rem;
+    --font-size-3: 1rem;
+    --font-weight-thin: 300;
+    --font-weight-bold: 600;
+    --font-weight-heavy: 800;
+    --spacer-1: .25rem;
+    --spacer-2: .5rem;
+    --spacer-3: 1rem;
+    --spacer-4: 1.5rem;
+    --spacer-5: 2rem;
+    --spacer-6: 2.25rem;
+    --height-img-1: 1rem;
+    --height-img-2: 2rem;
+    --max-width: 64rem;
+    --shadows: 7px 7px 7px rgba(0, 0, 0, .15);
+  }
+  
+  /* Styles for the HTML element */
+  html {
+    font-size: 16px;
+    line-height: 1.44;
+  }
+  
+  /* Styles for the document body */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styles for the navigation bar */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 43px;
+    background-color: var(--secondary);
+    color: var(--gray-4);
+    font-weight: var(--font-weight-heavy);
+  }
+  
+  /* Styles for the navigation sections */
+  /*The nav-main section aims to allow the navigation bar content to expand up to a maximum width while preserving the background color across its entire width.*/
+  .nav-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-width);
+    padding-inline: var(--spacer-3);
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacer-3);
+  }
+  
+  /* Styles for the "dogos" logo */
+  .dogos-logo {
+    height: var(--height-img-2);
+  }
+  
+  /* Styles for the navigation links */
+  nav ul {
+    display: flex;
+    gap: var(--spacer-6);
+  }
+  
+  nav li {
+    list-style: none;
+    padding-bottom: var(--spacer-1);
+  }
+  
+  /* Styles for general a tag (links) */
+  a {
+    text-decoration: none;
+    color: inherit; 
+  }
+  
+  /* Styles for the active navigation link */
+  .active {
+    border-bottom: 2px solid var(--gray-4);
+  }
+  
+  /* Styles for the main content section */
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacer-4) var(--spacer-3);
+    gap: var(--spacer-4);
+    max-width: var(--max-width);
+  }
+  
+  /* Styles for h1 and h2 headers */
+  h1 {
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-bold);
+    color: var(--gray-0);
+  }
+  
+  h2 {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-bold);
+    color: var(--gray-0);
+  }
+  
+  /* Styles for containers */
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-4);
+  }
+  
+  /* Styles for cards */
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacer-4);
+    border: 1px solid var(--gray-2);
+    padding: var(--spacer-3);
+    box-shadow: var(--shadows);
+  }
+  
+  /* Styles for card content */
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-3);
+    font-weight: var(--font-weight-thin);
+    color: var(--gray-1);
+  }
+  
+  /* Styles for links within cards */
+  .card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacer-2);
+    padding-block: var(--spacer-2);
+    background-color: var(--primary);
+    color: var(--gray-3);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  /* Styles for the paw icon */
+  .paw-icon {
+    height: var(--height-img-1);
+  }
+  
+  /* Styles for larger screens (768px or more) */
+  @media screen and (min-width: 768px) {
+    .container {
+      flex-direction: row; /*Change the card layout from a column to a row direction with a new spacing.*/
+      gap: var(--spacer-5);
+    }
+  
+    .card {
+      flex: 1; /* Allows all elements (cards) to have the same width */
+    }
+  }
